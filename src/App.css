@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
+/* 
+1. Header 
+2. TinderCards
+3. SwipeButtons
+*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* 1. Header */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.header__logo {
+  object-fit: contain;
+  height: 40px;
+}
+
+.header__icon {
+  padding: 20px;
+}
+
+/* 2. TinderCards */
+
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 600px;
+  padding: 20px;
+  max-width: 85vw;
+  height: 50vw;
+  box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+.tinderCards__cardContainer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10vh;
 }
 
-.App-link {
-  color: #61dafb;
+.swipe {
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  color: #fff;
+}
+
+/* 3. SwipeButtons */
+
+.swipeButtons {
+  position: fixed;
+  bottom: 10vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.swipeButtons .MuiIconButton-root {
+  background-color: white;
+  box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swipeButtons__repeat {
+  padding: 3vw !important;
+  color: #f5b748 !important;
+}
+
+.swipeButtons__left {
+  padding: 3vw !important;
+  color: #ec5e6f !important;
+}
+
+.swipeButtons__star {
+  padding: 3vw !important;
+  color: #62b4f9 !important;
+}
+
+.swipeButtons__right {
+  padding: 3vw !important;
+  color: #76e2b3 !important;
+}
+
+.swipeButtons__lightning {
+  padding: 3vw !important;
+  color: #915dd3 !important;
 }
